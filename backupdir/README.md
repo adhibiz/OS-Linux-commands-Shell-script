@@ -454,7 +454,6 @@ cat urllist.txt | tr -d ' ' | tr -s '.'
 tar -cvf backup.tar \*
 
 ## OUTPUT
-![alt text](image.png)
 
 mkdir backupdir
 
@@ -465,24 +464,20 @@ cd backupdir
 tar -tvf backup.tar
 
 ## OUTPUT
-![alt text](image-1.png)
 
 tar -xvf backup.tar
 
 ## OUTPUT
-![alt text](image-2.png)
 
 gzip backup.tar
 
 ls .gz
 
 ## OUTPUT
-![alt text](image-4.png)
 
 gunzip backup.tar.gz
 
 ## OUTPUT
-![alt text](image-3.png)
 
 # Shell Script
 
@@ -508,7 +503,6 @@ stop
 cat herecheck.txt
 
 ## OUTPUT
-![alt text](image-5.png)
 
 cat < scriptest.sh
 
@@ -548,32 +542,27 @@ chmod 777 scriptest.sh
 ./scriptest.sh 1 2 3
 
 ## OUTPUT
-![alt text](image-6.png)
 
 ls file1
 
 ## OUTPUT
-![alt text](image-7.png)
 
 echo $?
 
 ## OUTPUT
-![alt text](image-8.png)
-```
+
 ./one
 bash: ./one: Permission denied
 
 echo $?
-```
+
 ## OUTPUT
-![alt text](image-9.png)
 
 abcd
 
 echo $?
 
 ## OUTPUT
-![alt text](image-10.png)
 
 # mis-using string comparisons
 
@@ -613,7 +602,6 @@ chmod 755 strcomp.sh
 ./strcomp.sh
 
 ## OUTPUT
-![alt text](image-11.png)
 
 # check file ownership
 
