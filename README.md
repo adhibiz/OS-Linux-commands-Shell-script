@@ -617,7 +617,7 @@ chmod 755 strcomp.sh
 
 # check file ownership
 
-cat < psswdperm.sh
+cat > psswdperm.sh
 
 ```bash
 \#!/bin/bash
@@ -645,7 +645,7 @@ fi
 ./psswdperm.sh
 
 ## OUTPUT
-
+![alt text](image-12.png)
 # check if with file location
 
 cat>ifnested.sh
@@ -696,7 +696,7 @@ fi
 ./ifnested.sh
 
 ## OUTPUT
-
+![alt text](image-13.png)
 # using numeric test comparisons
 
 cat > iftest.sh
@@ -740,6 +740,7 @@ $ chmod 755 iftest.sh
 
 $ ./iftest.sh
 ##OUTPUT
+![alt text](image-14.png)
 
 # check if a file
 
@@ -864,6 +865,8 @@ esac
 $ chmod 755 casecheck.sh
 
 $ ./casecheck.sh
+## OUTPUT
+![alt text](image-15.png)
 
 cat > whiletest
 
