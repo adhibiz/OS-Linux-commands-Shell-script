@@ -495,6 +495,7 @@ chmod 755 my-script.sh
 ./my-script.sh
 
 ## OUTPUT
+![alt text](image-16.png)
 
 cat << stop > herecheck.txt
 
@@ -508,7 +509,7 @@ stop
 cat herecheck.txt
 
 ## OUTPUT
-![alt text](image-5.png)
+![alt text](image-17.png)
 
 cat < scriptest.sh
 
@@ -793,6 +794,7 @@ $ chmod 755 ifnested.sh
 
 $ ./ifnested.sh
 ##OUTPUT
+![alt text](image-18.png)
 
 # looking for a possible value using elif
 
@@ -884,7 +886,8 @@ done
 $ chmod 755 whiletest.sh
 
 $ ./whiletest.sh
-
+## output
+![alt text](image-19.png)
 cat untiltest.sh
 
 ```bash
@@ -898,6 +901,9 @@ done
 ```
 
 $ chmod 755 untiltest.sh
+$ ./untiltest.sh
+## outupt
+![alt text](image-20.png)
 
 cat forin1.sh
 
@@ -911,21 +917,11 @@ done
 ```
 
 $ chmod 755 forin1.sh
+## output
+![alt text](image-21.png)
 
-cat forin2.sh
 
-```bash
-\#!/bin/bash
-\# another example of how not to use the for command
-for test in I don't know if this'll work
-do
-echo “word:$test”
-done
-```
-
-$ chmod 755 forin2.sh
-
-cat forin2.sh
+$ cat forin2.sh
 
 ```bash
 \#!/bin/bash
@@ -939,6 +935,8 @@ done
 $ chmod 755 forin2.sh
 
 $ ./forin2.sh
+output
+![alt text](image-22.png)
 
 cat forin3.sh
 
@@ -952,8 +950,10 @@ done
 ```
 
 $ ./forin3.sh
+## output
+![alt text](image-23.png)
 
-cat forin1.sh
+$ cat forin1.sh
 
 ```bash
 #!/bin/bash
@@ -967,16 +967,17 @@ done
 $ chmod 755 forin1.sh
 
 ## OUTPUT
+![alt text](image-24.png)
 
-cat forinfile.sh
+$ cat forinfile.sh
 
 ```bash
 #!/bin/bash
 # reading values from a file
 file="cities"
-for state in `cat $file`
+for state in $(cat "$file")
 do
-echo "Visit beautiful $file“
+    echo "Visit beautiful $state"
 done
 ```
 
@@ -991,6 +992,7 @@ Bhadrachalam
 Khammam
 
 ## OUTPUT
+![alt text](image-27.png)
 
 cat forctype.sh
 
@@ -1007,6 +1009,7 @@ $ chmod 755 forctype.sh
 $ ./forctype.sh
 
 ## OUTPUT
+![alt text](image-28.png)
 
 cat forctype1.sh
 
@@ -1019,10 +1022,11 @@ echo "$a - $b"
 done
 ```
 
-$ chmod 755 forctype.sh
+$ chmod 755 forctype1.sh
 $ ./forctype1.sh
 
 ## OUTPUT
+![alt text](image-29.png)
 
 cat fornested1.sh
 
@@ -1044,6 +1048,7 @@ $ chmod 755 fornested1.sh
 $ ./fornested1.sh
 
 ## OUTPUT
+![alt text](image-30.png)
 
 cat forbreak.sh
 
@@ -1060,27 +1065,28 @@ echo "Iteration number: $var1"
 done
 echo "The for loop is completed“
 ```
-
-## OUTPUT
-
 $ chmod 755 forbreak.sh
 
 $ ./forbreak.sh
+## OUTPUT
+![alt text](image-31.png)
 
-cat forbreak.sh
+
+cat forcontinue.sh
 
 ```bash
 #!/bin/bash
-# breaking out of a for loop
+# skipping an iteration with 'continue'
 for var1 in 1 2 3 4 5
 do
-if [ $var1 -eq 3 ]
-then
-continue
-fi
-echo "Iteration number: $var1"
+    if [ $var1 -eq 3 ]
+    then
+        continue
+    fi
+    echo "Iteration number: $var1"
 done
-echo "The for loop is completed“
+echo "The for loop is completed"
+
 ```
 
 $ chmod 755 forcontinue.sh
@@ -1088,6 +1094,7 @@ $ chmod 755 forcontinue.sh
 $ ./forcontinue.sh
 
 ## OUTPUT
+![alt text](image-32.png)
 
 cat exread.sh
 
@@ -1104,6 +1111,7 @@ $ chmod 755 exread.sh
 $ ./exread.sh
 
 ## OUTPUT
+![alt text](image-33.png)
 
 cat exread1.sh
 
@@ -1115,10 +1123,12 @@ echo "Hello $name, welcome to my program. “
 ```
 
 $ chmod 755 exread1.sh
+$ ./exread1.sh
 
 ## OUTPUT
+![alt text](image-34.png)
 
-$ ./exread1.sh
+
 
 cat funcex.sh
 
@@ -1137,11 +1147,10 @@ echo "Usage: badtest1 a b"
 fi
 ```
 
-## OUTPUT
-
-./funcex.sh
 
 ./funcex.sh 1 2
+## OUTPUT
+![alt text](image-35.png)
 
 cat argshift.sh
 
@@ -1154,10 +1163,12 @@ done
 ```
 
 $ chmod 777 argshift.sh
+$ ./argshift.sh 1 2 3
 
 ## OUTPUT
+![alt text](image-36.png)
 
-$ ./argshift.sh 1 2 3
+
 
 cat argshift1.sh
 
@@ -1174,11 +1185,13 @@ for (( i=0;i<$ELEMENTS;i++)); do
 done
 ```
 
-$ chmod 777 argshift.sh
+$ chmod 777 argshift1.sh
+$ ./argshift1.sh 1 2 3
 
 ## OUTPUT
+![alt text](image-37.png)
 
-$ ./argshift.sh 1 2 3
+
 
 cat argshift.sh
 
@@ -1193,6 +1206,7 @@ set +x
 ```
 
 ## OUTPUT
+![alt text](image-38.png)
 
 ./argshift.sh 1 2 3
 
@@ -1231,6 +1245,8 @@ awk -f nc.awk data.dat
 
 ## OUTPUT
 
+![alt text](image-26.png)
+
 cat > palindrome.sh
 
 ```bash
@@ -1259,6 +1275,7 @@ fi
 ```
 
 ## OUTPUT
+![alt text](image-25.png)
 
 # RESULT:
 
